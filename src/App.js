@@ -11,7 +11,7 @@ function App() {
       return (
       <div>    
           <BrowserRouter>
-            <div className="App">
+            <div className="App"> 
                 <Route path="/:name/moviedetails" component={MovieDetails}></Route>
                 <Route path="/movies" component={Movies}></Route> 
             </div>
