@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Movies from "./components/Movies";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MovieDetails from "./components/MovieDetails";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      return (
+      <div>    
+          <BrowserRouter>
+            <div className="App">
+                <Route path="/:name/moviedetails" component={MovieDetails}></Route>
+                <Route path="/movies" component={Movies}></Route> 
+            </div>
+          </BrowserRouter>
+      </div>  
+            );
+              }
+ export default App;
+        
 
-export default App;
+
+
+      
+    
+      
+      
+
