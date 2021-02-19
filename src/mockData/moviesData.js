@@ -90,7 +90,7 @@ export const movies = [
     {
       Movie: "Aditya 369",
 
-      id: "12345",
+      id: "aditya_369",
 
       Cast: [
               {
@@ -235,7 +235,7 @@ export const movies = [
       movietrailer:"https://www.youtube.com/watch?v=hnkKI01I0Ac&t=2s",
       link1:"https://www.youtube.com/watch?v=Qi_XEBxyduQ&t=7s",
       img: MadrasCafeImg,
-      id:"67890",
+      id:"madras_cafe",
       ReleaseDate: "23 August 2013",
       Production: {
                 name:"JA Entertainment",
@@ -337,7 +337,7 @@ export const movies = [
   movietrailer:"https://www.youtube.com/watch?v=aozErj9NqeE",
       link1:"https://www.youtube.com/watch?v=8VroGfe3BQ4",
       img: ArjunImg,
-      id:"11121",
+      id:"arjun_reddy",
       ReleaseDate: "25 August 2017",
       Production: {
            name:"Bhadrakali pictures",
@@ -435,7 +435,7 @@ export const movies = [
       link1:"https://www.youtube.com/watch?v=rf6LIkElS00",
       movietrailer:"https://www.youtube.com/watch?v=SmUl0l8qBXw",
       img: EkThaTigerImg,
-      id:"13141",
+      id:"ekthatiger",
       ReleaseDate: "August 15, 2012",
       Production: {
         name:"Yash Raj Films",
@@ -485,7 +485,7 @@ export const movies = [
 // Details of 3Idiots
        {
       Movie: "3 idiots",
-      id: "654321",
+      id: "3idiots",
       Cast: [
               {
                 name:"Aamir",
@@ -580,7 +580,7 @@ export const movies = [
 //  Details of spider-man(2002)......
     {
       Movie: "Spider-man(2002)",
-      id: "spiderman(2002)",
+      id: "spiderman_2002",
       Cast: [
               {
                 name:"Tobey Maguire",

@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { movies } from "../mockData/moviesData";
-import { faStar, StarRating } from "react-bootstrap-star-rating";
+import { faStar} from "react-bootstrap-star-rating";
 import {Link} from "react-router-dom";
-// import {ReactStars} from "react-rating-stars-component";
+
+// import StarRating from 'react-bootstrap-star-rating';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import homelogo from "../img/home.jpg";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SocialFollow from "../components/Socialfollow";
+import StarRating from "../img/starrating.jpg";
 
 
 class MovieDetails extends Component {
@@ -23,9 +25,9 @@ class MovieDetails extends Component {
   render() {
 
     const movieID = this.props.match.params.name;
-    console.log(this.props);
     
     const moviedetails = this.state.movies.find(item => item.id == movieID);
+    localStorage.setItem('selectedMovie', moviedetails.Movie);
 
    return (
       <div className="bg-dark">
@@ -41,10 +43,10 @@ class MovieDetails extends Component {
                   ></img>
               </Link>
 
-          <Dropdown>
+          <Dropdown className="imdb-menu">
             <Dropdown.Toggle
               className="imdb-menu"
-              variant="Secondary"
+              
               id="dropdown-basic"
             >
               Imdbmenu
@@ -75,7 +77,16 @@ class MovieDetails extends Component {
           <h1 className="col mt-3 text-white">{moviedetails.Movie}</h1>
 
           <div className="hell">
-            <FontAwesomeIcon icon={faStar} className="star" />
+          
+                <img
+                    // className="imglogo"
+                    className="rating"
+                    src={StarRating}
+                    alt="starrating"
+                    width="35"
+                    height="20"
+                  />
+            {/* <FontAwesomeIcon icon={faStar} className="star" /> */}
             <p className="imdb">IMDB rating</p>
             <p className="rate">{moviedetails.Rating}</p>
           </div>
@@ -92,9 +103,9 @@ class MovieDetails extends Component {
            return (<a href={scene.link}>{scene.label}</a>);
          })} */}
 
-              <div>
-              <Link to="/Ticketbooking">
-                Ticketbooking
+              <div className="ticketlink">
+              <Link to="/Ticketbooking" className="ll">
+                Ticket Booking
               </Link>
                 
               </div>
@@ -241,8 +252,7 @@ class MovieDetails extends Component {
           <div className="bg-white complete">
             <p className="text-center moviescenes">Movie scenes</p>
             <div className="movie-right">
-
-               {moviedetails.scenes.map((scene, index) => {
+                 {moviedetails.scenes.map((scene, index) => {
                 return (
                   <span key={index}>
                     <span>
@@ -251,11 +261,11 @@ class MovieDetails extends Component {
                       </a>
                       <img
                         src={scene.img}
-                        className="img-thumbnail"
+                        className="img-thumbnail pic"
                         width="20%"
-                        height="18"
+                         height="18"
                       />
-                    </span>
+                      </span>
                   </span>
                 );
               })}

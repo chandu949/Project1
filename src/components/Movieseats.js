@@ -4,7 +4,12 @@ import angleleft from "../img/angleleft.png";
 import screencover from "../img/screencover.jpg";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { Modal,Button} from 'react-bootstrap';
-// import { movies } from "../mockData/moviesData";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee} from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 
 class Movieseats extends Component {
 
@@ -15,10 +20,13 @@ class Movieseats extends Component {
         selectedseats:[],
         selectedtickets:false,
         modalclose:false,
-        
-       
+        movieSelected: localStorage.getItem('selectedMovie'),
+
       }
     }           
+       
+        
+       
         
     booktickets = (row,index) => {
         const {cost,selectedseats,modalclose} = this.state;
@@ -29,14 +37,16 @@ class Movieseats extends Component {
         this.setState({
             cost:newcost,
             selectedseats:selectedseats,
-            modalclose:true
-            
+            modalclose:true,
+              
           })
         }
 
         ticketbooked = () => {
+         
           this.setState({
-            selectedtickets:true
+            selectedtickets:true,
+            
           })
 
         }
@@ -101,7 +111,7 @@ return (
   
       <div>
         <nav className="navbar navbar-light bg-dark">
-         {/* <h1 className="col mt-3 text-white">{moviedetails.Movie}</h1> */}
+        
          
         
         <Link  to="/Ticketbooking">
@@ -113,9 +123,20 @@ return (
             height="70"
           />
           </Link>
+          <h1 className="col mt-3 text-white">{this.state.movieSelected}</h1>
           
        </nav>
-        <nav className="navbar navbar-light bg-light">gdhfghfdgfgfd</nav>
+        <nav className="navbar navbar-light bg-light food">
+          <div>
+            <FontAwesomeIcon icon={faCoffee} />
+           
+            
+            Food and Beverages available
+          </div>
+             
+             
+             </nav>
+         
 
         <div className="mt-4 movieseats">
           <div className="mx-5 gold">
@@ -253,26 +274,32 @@ return (
         { modalclose && <div className="border footer">
           <div className=" mt-2 payable">
             <div className="mt-2  pay">Pay Rs.{cost}-/</div>
+            <Link to="/bookingsummary">
             <button type="button" className="ticket" onClick={this.ticketbooked}>TAKE TICKETS</button>
+            </Link>
           </div>         
         </div>}
         <Modal show={this.state.selectedtickets}>
-  <Modal.Header> Booking summary
+  <Modal.Header className="summary"> Booking summary
   </Modal.Header>
-  <Modal.Body>Seats   {this.state.selectedseats.map(seat=> {
+  <Modal.Body className="paywatch">Selected  Seats:  {this.state.selectedseats.map(seat=> {
   
     return(
-          <span>{seat},</span>
+          <span className="paywatch">{seat},</span>
          )
      })}
   
-  <div>Total Rs.{cost}</div>
+  <div className="paywatch">Total Rs.{cost}</div>
+  
   
   </Modal.Body>
         <Modal.Footer>
-          <Button onClick={this.ticketsdone} variant="secondary">Done</Button>
+          <Link to="/movieseats">
+                 <Button onClick={this.ticketsdone} variant="secondary">Done</Button>
+          </Link>
         </Modal.Footer>
   </Modal>
+  
       
       </div>
     );

@@ -19,6 +19,7 @@ function App() {
                 <Route path="/movies" component={Movies}></Route> 
                 <Route path="/movieseats" component={Movieseats}></Route>
                 <Route path="/Ticketbooking" component={Ticketbooking}></Route>
+                <Route path="/bookingsummary" component={Movieseats}></Route>
                 <Redirect from="/" to="/movies" />
             </div>
           </BrowserRouter>

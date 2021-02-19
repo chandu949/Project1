@@ -3,6 +3,16 @@
   margin: auto;
 }
 
+.title{
+  color: #C49102;
+  font-size: 25px;
+
+} 
+
+.movieload{
+  font-size: 20px;
+}
+
 .tile {
   background: #607d8b0a;
   border-radius: 10px;
@@ -47,11 +57,13 @@
 
 .imdb-menu {
   background-color: white !important;
+  
 }
 
 .imdb-menu:hover {
   background-color: turquoise !important;
   color: black !important;
+  border-radius: 6px;
 }
 
 .imdb-shows {
@@ -76,7 +88,11 @@
   background-color: rgb(85 90 92);
   box-shadow: 2px 2px 6px 0px #888888;
 }
-
+.rating{
+  position: absolute;
+  top: 15%;
+  right: 37%;
+}
 .star {
   position: absolute;
   top: 15%;
@@ -86,6 +102,25 @@
   color: orange;
   font-size: 25px;
 }
+
+.ticketlink{
+  background-color: #5dc01b;
+  border-radius: 4px;
+  border: none;
+}
+.ll{
+  color: black;
+}
+.ticketlink:hover{
+  background-color: blue;
+}
+.ll:hover{
+  color: whitesmoke;
+  text-decoration: none;
+  
+  border-radius: 4px;
+}
+
 
 .rate {
   position: absolute;
@@ -335,6 +370,61 @@ a.social:hover {
  box-shadow:10px 10px 5px #888,;
 }
 
+.day{
+  background-color: #d90166;
+  border-radius: 6px;
+  color: #ccc;
+  margin: 6px;
+  border: none;
+  height: 35px;
+  width: 50px;
+}
+  
+.quote{
+  display:block;
+  margin:auto;
+  width:10%;
+  margin-top: 60px;
+  border: 1px solid;
+  background: #607d8b0a;
+  border-radius: 80px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 20px;
+  color: #4968ad;
+}
+
+.timings{
+  display:block;
+  margin:auto;
+  margin-top: 60px;
+  border: 1px solid;
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 18px;
+}
+
+.myshowtiming{
+  margin: 8px; 
+  border-radius: 8px;
+  background-color:#5dc01b;
+  color: white;
+  border: none;
+}
+
+.terms{
+  font-size: large;
+  color: #d90166;
+  text-align: center;
+}
+
+
+
+.conditions{
+  font-size: 16px;
+}
+
 .pay{
   display: inline-block;
   margin: auto;
@@ -364,4 +454,19 @@ a.social:hover {
     background-color: green;
     border: none;
   }
+/* .text-white{
+   text-align: center; 
+} */
 
+.food{
+  text-align: center;
+
+}
+
+.summary{
+  font-size: large;
+}
+
+.paywatch{
+  font-size: large;
+}

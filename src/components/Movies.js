@@ -87,14 +87,14 @@ class Movies extends Component {
           </InputGroup.Append>
         </InputGroup>  
 
-        <div> 
-          {filteredMovies.length > 0 && <span>Title</span>}
+        <div className="mt-4"> 
+          {filteredMovies.length > 0 && <span className="title">Movie Titles</span>}
             
           {filteredMovies.map((item, index) => {
             return (
               
              <div 
-                 className="tile mt-4"
+                 className="tile mt-4 movieload"
                 onClick={() => this.loadMoviewDetails(item)}>
                 
               

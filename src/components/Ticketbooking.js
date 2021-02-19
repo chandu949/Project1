@@ -57,40 +57,37 @@ class Ticketbooking extends Component {
                 
                 {showdays.map(days => {
                   return (
+                     <button type="button" className="day" onClick={this.eachdayshow}>{days}</button>
                    
-
-                       <button type="button" className="day" onClick={this.eachdayshow}>{days}</button>
-                   
-                )})}
-              </nav>
+                      )})}
+                    </nav>
               
-              
-              </div>
+                     </div>
                     
-            {selectday ? <div>
+            {selectday ? <div className="timings">
                <div>
-                  usha prasad multiplex : Nizamabad
+                  Usha Prasad Multiplex : Nizamabad 
                   {
                     showTimes.map(timing=> {
-                      return <button type="button"  onClick={this.onShowTimingClick} className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title= "Rs.130.00, GOLD ,available" >{timing}</button>
+                      return <button type="button"  onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title= "Rs.130.00, GOLD ,available" >{timing}</button>
                       })}
 
                 </div>
 
                 <div>
-                  AMB Cinemas: Gachibowli
+                  AMB Cinemas: Gachibowli 
                   {
                     showTimes.map(timing=> {
-                      return <button type="button"  onClick={this.onShowTimingClick} className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
+                      return <button type="button"  onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
                     })
                   }
                 </div>
 
                 <div>
-                  PVR: Central Mall, Panjagutta
+                  PVR: Central Mall, Panjagutta 
                   {
                     showTimes.map(timing => {
-                      return <button type="button" onClick={this.onShowTimingClick} className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
+                      return <button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
                     })
                   }
                 </div>
@@ -99,10 +96,10 @@ class Ticketbooking extends Component {
  
 
                 <div>
-                  INOX: GVK One, Banjara Hills
+                  INOX: GVK One, Banjara Hills 
                   {
                     showTimes.map(timing => {
-                      return <button type="button" onClick={this.onShowTimingClick} className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
+                      return <button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
                     })
                   }
                  
@@ -111,17 +108,17 @@ class Ticketbooking extends Component {
                 <div>
                   Cinepolis: Sudha Cinemas, Hyderabad
                  {
-                   showTimes.map(timing => {
-                     return <button type="button" onClick={this.onShowTimingClick} className="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Rs.130.00,  GOLD, available">{timing}</button>
+                  showTimes.map(timing => {
+                     return  < button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00,  GOLD, available">{timing}</button>
                    })
                  }
                 
                 </div>
                
                 <Modal show={showAlert}>
-                    <Modal.Header>Terms and Condition
+                    <Modal.Header><div className="terms">Terms and Condition</div>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body className="conditions">
                     <div>1. Right of admission reserved.</div>
                     <div>2. Ticket is Compulsory for Children of 3 Years age & Above.</div>
                     <div>3. Please Carry ID Proof for movies Certified with `A` Certificate.</div>
