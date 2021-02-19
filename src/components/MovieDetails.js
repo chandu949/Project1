@@ -84,7 +84,7 @@ class MovieDetails extends Component {
                     src={StarRating}
                     alt="starrating"
                     width="35"
-                    height="20"
+                    height="24"
                   />
             {/* <FontAwesomeIcon icon={faStar} className="star" /> */}
             <p className="imdb">IMDB rating</p>
