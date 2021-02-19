@@ -10,6 +10,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SocialFollow from "../components/Socialfollow";
 
+
 class MovieDetails extends Component {
   constructor(props) {
     super(props);
@@ -92,12 +93,10 @@ class MovieDetails extends Component {
          })} */}
 
               <div>
-                <a
-                  className="text-white"
-                  href="https://www.imdb.com/showtimes/"
-                >
-                  Ticket Booking
-                </a>
+              <Link to="/Ticketbooking">
+                Ticketbooking
+              </Link>
+                
               </div>
             </div>
           </div>
@@ -241,7 +240,7 @@ class MovieDetails extends Component {
 
           <div className="bg-white complete">
             <p className="text-center moviescenes">Movie scenes</p>
-            <div className="move-right">
+            <div className="movie-right">
 
                {moviedetails.scenes.map((scene, index) => {
                 return (

@@ -1,4 +1,4 @@
-/* .text-center {
+ .text-center {
   width: 50%;
   margin: auto;
 }
@@ -46,7 +46,7 @@
 } */
 
 .imdb-menu {
-  color: white !important;
+  background-color: white !important;
 }
 
 .imdb-menu:hover {
@@ -126,7 +126,7 @@ background: var(--ipt-baseAlt-shade1-bg,rgb(31,31,31));
     margin-bottom: 0.25rem;
 } */
 
-/* .rating label::before
+ .rating label::before
 {
 content:  "\f006";
 font-family: "FontAwesome";
@@ -217,17 +217,19 @@ transition: 0.5s;
       color:#FF00FF;
      }
 
-     .complete{
-      /* width: 100%; */
+       .complete{
+       /* width: 100%;  */
     border-radius: 12px;
-     }
+     }  
 
      .scenes{
-       font-size: 30px;
+       font-size: 25px;
      }
-  .move-right{
-    margin-left: 5%;
-  }
+    .movie-right{
+    /* margin-right:10px; */
+    margin: auto;
+    display: inline-block;
+  }  
 /* .scene-link{
   color: white;
 } */
@@ -240,8 +242,6 @@ a.social {
   margin: 0 1rem;
   transition: transform 250ms;
   display: inline-block;
-  
- 
 }
 
 a.youtube {
@@ -277,6 +277,91 @@ a.social:hover {
 
 .foot:hover{
   color: white;
+}
+
+.seats{
+  border: solid 1px;
+  height: 25px;
+  width: 25px;
+  margin-left: 69px;
+  padding-left: 8px;
+  font-size: 17px;
+  background-color: aquamarine;
+  color: blueviolet;
+  
+}
+
+.seatsnum{
+  margin-left: 120px;
+}
+
+.moveseat{
+  margin:8px;
+  height: 30px;
+  width: 30px;
+}
+.seatsnum1{
+  margin-left: 110px;
 
 }
+
+.seatsnum2{
+  margin-left: 110px;
+
+}
+
+.moveseat:hover{
+  background-color: green;
+  color: whitesmoke;
+}
+
+.moveseat{
+   color: green;
+   border-radius: 6px;
+}
+
+.screencover{
+  display: block;
+  margin: auto;
+}
+
+.screenlook{
+ text-align: center;
+}
+
+.footer{
+ height:60px;
+ background-color: whitesmoke;
+ box-shadow:10px 10px 5px #888,;
+}
+
+.pay{
+  display: inline-block;
+  margin: auto;
+  margin-left: 30px;
+  height: 30px;
+  margin-top: 0px;
+  color:white;
+}
+
+.payable{
+  display: block;
+  margin: auto;
+  border: solid 1px tomato;
+  border-radius: 12px;
+  width: 30%;
+  background-color: #FF00FF;
+}
+  .ticket{
+    background-color: #5dc01b;
+    color: aliceblue;
+    border-radius: 8px;
+    border: none;
+    margin-left: 150px;
+  }
+
+  .ticket:hover{
+    background-color: green;
+    border: none;
+  }
 

@@ -14,13 +14,17 @@ class Movies extends Component {
       searchtext: "",
       filteredMovies: [],
       movies: movies,
+      
+     
     };
   }
 
   changeSearchText = (e) => 
+
   {
     this.setState({
       searchtext: e.target.value,
+   
     });
   };
 
@@ -45,15 +49,20 @@ class Movies extends Component {
     if (code === 13) {
       //13 is the enter keycode
       this.onFilterMovies(event);
-    }
+   
+      }
+    
   };
 
   loadMoviewDetails = (movie) => {
     return <MovieDetails movie={movie} />;
+
   };
   render() {
-     const { searchtext, filteredMovies } = this.state;
+     const { searchtext, filteredMovies} = this.state;
+    
     return (
+            
       <div className="text-center">
 
         
@@ -78,12 +87,16 @@ class Movies extends Component {
           </InputGroup.Append>
         </InputGroup>  
 
-        <div>
+        <div> 
+          {filteredMovies.length > 0 && <span>Title</span>}
+            
           {filteredMovies.map((item, index) => {
             return (
-              <div
-                // className="tile mt-5"
-                onClick={() => this.loadMoviewDetails(item)} >
+              
+             <div 
+                 className="tile mt-4"
+                onClick={() => this.loadMoviewDetails(item)}>
+                
               
                 <Link to={`${item.id}/moviedetails`}>
                   <div key={index} className="cine-right">
@@ -91,9 +104,12 @@ class Movies extends Component {
                   </div>
                 </Link>
               </div>
-            );
+             
+          );
           })}
+        
         </div>
+            
       </div>
     );
   }
