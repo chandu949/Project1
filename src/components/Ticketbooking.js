@@ -46,6 +46,7 @@ class Ticketbooking extends Component {
     render() {
       const showTimes = ["10:30AM", "1:30PM", "04:45PM", "07:25PM"];
       const showdays = ["MON","TUE","WED","THU","FRI","SAT","SUN"];
+      
       const { showAlert, alertMsg,selectday } = this.state;
 
         return (
@@ -66,7 +67,7 @@ class Ticketbooking extends Component {
                     
             {selectday ? <div className="timings">
                <div>
-                  Usha Prasad Multiplex : Nizamabad 
+                 <div className="cinemas">Usha Prasad Multiplex : Nizamabad</div>
                   {
                     showTimes.map(timing=> {
                       return <button type="button"  onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title= "Rs.130.00, GOLD ,available" >{timing}</button>
@@ -75,7 +76,7 @@ class Ticketbooking extends Component {
                 </div>
 
                 <div>
-                  AMB Cinemas: Gachibowli 
+                <div className="cinemas">AMB Cinemas: Gachibowli</div>
                   {
                     showTimes.map(timing=> {
                       return <button type="button"  onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
@@ -84,7 +85,7 @@ class Ticketbooking extends Component {
                 </div>
 
                 <div>
-                  PVR: Central Mall, Panjagutta 
+                <div className="cinemas">PVR: Central Mall, Panjagutta</div>
                   {
                     showTimes.map(timing => {
                       return <button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
@@ -96,7 +97,7 @@ class Ticketbooking extends Component {
  
 
                 <div>
-                  INOX: GVK One, Banjara Hills 
+                <div className="cinemas">INOX: GVK One, Banjara Hills</div> 
                   {
                     showTimes.map(timing => {
                       return <button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00, GOLD ,available">{timing}</button>
@@ -106,7 +107,7 @@ class Ticketbooking extends Component {
                 </div>
 
                 <div>
-                  Cinepolis: Sudha Cinemas, Hyderabad
+                <div className="cinemas">Cinepolis: Sudha Cinemas, Hyderabad</div>
                  {
                   showTimes.map(timing => {
                      return  < button type="button" onClick={this.onShowTimingClick} className="myshowtiming" data-toggle="tooltip" data-placement="top" title="Rs.130.00,  GOLD, available">{timing}</button>

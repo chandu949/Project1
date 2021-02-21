@@ -274,9 +274,7 @@ return (
         { modalclose && <div className="border footer">
           <div className=" mt-2 payable">
             <div className="mt-2  pay">Pay Rs.{cost}-/</div>
-            <Link to="/bookingsummary">
             <button type="button" className="ticket" onClick={this.ticketbooked}>TAKE TICKETS</button>
-            </Link>
           </div>         
         </div>}
         <Modal show={this.state.selectedtickets}>
@@ -294,7 +292,7 @@ return (
   
   </Modal.Body>
         <Modal.Footer>
-          <Link to="/movieseats">
+          <Link to="/movies">
                  <Button onClick={this.ticketsdone} variant="secondary">Done</Button>
           </Link>
         </Modal.Footer>

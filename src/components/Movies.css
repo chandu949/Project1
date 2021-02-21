@@ -405,6 +405,11 @@ a.social:hover {
   font-size: 18px;
 }
 
+.cinemas{
+  display: inline-block;
+  width: 24%;
+}
+
 .myshowtiming{
   margin: 8px; 
   border-radius: 8px;
